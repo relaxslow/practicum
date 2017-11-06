@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="common.js"></script>
+</head>
+
+<body>
+	<script>
+		init();
+		addDiv("MainMenu");
+		addButton( "Customer", onclickPerson);
+		addButton( "Merchandise", onclickMerchandise);
+		
+		
+		function onclickPerson(){
+			setParent("MainMenu");
+			addDiv("subMenu");
+			addButton("add",onclickPersonAdd);
+			addButton("search",onclickPersonSearch);
+			addButton("list",onclickPersonList);
+			
+		}
+		function onclickMerchandise(){
+			setParent("MainMenu");
+			addDiv("subMenu");
+			addButton("add",onclickMerchandiseAdd);
+			addButton("search",onclickMerchandiseSearch);
+			
+		}
+		function onclickPersonAdd() {
+			setParent("subMenu");
+			addDiv("content");
+			addText("input customer Info:");
+			addInput("first name");
+			addInput("address");
+			addButton("submit")
+		}
+		function onclickPersonSearch(){
+
+		}
+		function onclickPersonList(){
+
+		}
+		function onclickMerchandiseAdd(){
+			setParent("subMenu");
+			addDiv("content");
+			addText("merchandise Info:");
+			addInput("date");
+			addInput("name");
+			addInput("price");
+			
+		}
+		function onclickMerchandiseSearch(){
+
+		}
+		
+	</script>
+
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+add new person
+	<br>
+	<input type="button" , value="add" ,onclick="clickAddPerson()">
+	<br> Name
+	<br>
+	<input type="text" ,id="firstName">
+	<br> address
+	<br>
+	<input type="text" , id="address">
+	<br> item
+	<br>
+	<input type="text" , id="buyItem">
+	<br> count
+	<br>
+	<input type="text" , id="buyItem">
+	<br> price
+	<br>
+	<input type="text" , id="price">
+	<br> actual price
+	<br>
+	<input type="text" , id="price">
+	<br> profit
+	<br>
+	<input type="text" , id="price">
+	<br>

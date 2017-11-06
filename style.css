@@ -1,0 +1,26 @@
+
+.menu{
+color:white;
+
+margin-left: 10px;
+}
+.pageHead{
+	text-align: center;
+}
+#topNav{
+	
+	background-color:rgb(61, 34, 34);
+	text-align: center;
+	
+}
+#MainMenu{
+	text-align: center;
+}
+#subMenu{
+	text-align:center;
+}
+
+#content{
+	text-align: center;
+}
+

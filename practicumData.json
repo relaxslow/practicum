@@ -1,0 +1,20 @@
+{
+	"person": [
+		{
+			"name": "Xu Song",
+			"address": [
+				"9529 Barcellona Ct., Fairfax, VA22031",
+				"13516 coates lane, Herndon ,VA20171 "
+			],
+			"items": [
+				{
+					"name": "robot",
+					"quantity":2,
+					"price": 23.34,
+					"customerPrice": 30.65,
+					"time":"3/10/2018"
+				}
+			]
+		}
+	]
+}
