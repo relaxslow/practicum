@@ -1,4 +1,9 @@
-
+#Main {
+	width: 500px;
+	text-align: center;
+	border: 3px solid green;
+	padding: 15px;
+}
 .menu{
 color:white;
 

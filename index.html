@@ -8,26 +8,60 @@
 
 <body>
 	<script>
-		init("customer system");
-		addDiv("MainMenu");
-		addButton( "Customer", onclickPerson);
-		addButton( "Merchandise", onclickMerchandise);
-		
-		
-		function onclickPerson(){
-			setParent("MainMenu");
-			addDiv("subMenu");
-			addButton("add",onclickPersonAdd);
-			addButton("search",onclickPersonSearch);
-			addButton("list",onclickPersonList);
-			
+
+		// var xhr = new XMLHttpRequest();
+		// xhr.open('GET', 'https://drive.google.com/uc?export=download&id=1umRqu3I0Rl64g73Cht_FXk9UdewcRKff', true);
+		// xhr.responseType = '';
+
+		// xhr.onload = function (e) {
+		// 	if (xhr.readyState === 4 && xhr.status === 200) {
+		// 		var type = xhr.getResponseHeader('Content-Type');
+		// 		if (type.indexOf("text") !== 1) {
+		// 			var xxx = xhr.responseText;
+		// 		}
+		// 	}
+
+		// };
+
+		// xhr.send();
+		function sendText(txt) {
+			var xhr = new XMLHttpRequest();
+			xhr.open('POST', "https://drive.google.com/uc?export=download&id=1umRqu3I0Rl64g73Cht_FXk9UdewcRKff", true);
+			xhr.onload = function (e) {
+				if (this.status == 200) {
+					console.log(this.responseText);
+				}
+			};
+
+			xhr.send(txt);
 		}
-		function onclickMerchandise(){
-			setParent("MainMenu");
+
+		sendText('xs test string');
+
+		init("customer system");
+
+		addDiv("Main");
+		addDiv("title");
+		addText("CUSTOMER SYSTEM", "h2", "applicationTitle");
+		addDiv("MainMenu", "Main");
+		addButton("Customer", onclickPerson);
+		addButton("Merchandise", onclickMerchandise);
+
+
+		function onclickPerson() {
+			setParent("Main");
 			addDiv("subMenu");
-			addButton("add",onclickMerchandiseAdd);
-			addButton("search",onclickMerchandiseSearch);
-			
+			addButton("add", onclickPersonAdd);
+			addButton("search", onclickPersonSearch);
+			addButton("list", onclickPersonList);
+
+		}
+		function onclickMerchandise() {
+			setParent("Main");
+			addDiv("subMenu");
+			addButton("add", onclickMerchandiseAdd);
+			addButton("search", onclickMerchandiseSearch);
+
 		}
 		function onclickPersonAdd() {
 			setParent("subMenu");
@@ -37,25 +71,25 @@
 			addInput("address");
 			addButton("submit")
 		}
-		function onclickPersonSearch(){
+		function onclickPersonSearch() {
 
 		}
-		function onclickPersonList(){
+		function onclickPersonList() {
 
 		}
-		function onclickMerchandiseAdd(){
+		function onclickMerchandiseAdd() {
 			setParent("subMenu");
 			addDiv("content");
 			addText("merchandise Info:");
 			addInput("date");
 			addInput("name");
 			addInput("price");
-			
-		}
-		function onclickMerchandiseSearch(){
 
 		}
-		
+		function onclickMerchandiseSearch() {
+
+		}
+
 	</script>
 
 </body>
